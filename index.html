@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahin</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/8cd60501b2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id ="header">
+        <div class="container">
+           <nav>
+             <img src="images/logo.png"class="logo">
+             <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+             </ul>
+           </nav>
+           <div class="header-text">
+            <p>Backend Developer</p>
+            <h1>Hi, I'm<span> Mahin</span> <br> From Bangladesh</h1>
+           </div> 
+        </div>
+
+    </div>
+
+<!-- ABOUT SECTION -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/hello.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        I’m a backend developer who thrives on building fast, scalable systems with Node.js, Express, and JavaScript. My
+                        strength lies in crafting high-performance RESTful APIs, designing efficient database architectures (MySQL for
+                        relational, MongoDB for NoSQL), and ensuring seamless server-side logic. I obsess over clean code, optimized queries,
+                        and secure authentication (JWT, sessions, OAuth) to deliver robust backends that power smooth user experiences. Whether
+                        it’s debugging bottlenecks, scaling database operations, or architecting microservices, I love turning complex problems
+                        into elegant, maintainable solutions.
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')" >Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Language</span><br>JavaScript</li>
+                            <li><span>Backend</span><br>Node.js, Express.js</li>
+                            <li><span>Databases</span><br>MySQL, MongoDB</li>
+                            <li><span>API Development</span><br>RESTful APIs, Authentication (JWT, OAuth)</li>
+                            <li><span>Version Control</span><br>Git, GitHub</li>
+                            <li><span>Other Tools</span><br>Postman</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Language</span><br>JavaScript</li>
+                            <li><span>Backend</span><br>Node.js, Express.js</li>
+                            <li><span>Databases</span><br>MySQL, MongoDB</li>
+                            <li><span>API Development</span><br>RESTful APIs, Authentication (JWT, OAuth)</li>
+                            <li><span>Version Control</span><br>Git, GitHub</li>
+                            <li><span>Other Tools</span><br>Postman</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022-2026</span><br>Bsc in Cse,United International University</li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services -->
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title"> My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Backend Development</h2>
+                    <p>
+                        ✔ RESTful API Development<br>
+                        ✔ Database Design & Optimization<br>
+                        ✔ Authentication (JWT, OAuth)<br>
+                        ✔ Performance Tuning & Security<br>
+                        ✔ Clean, Maintainable Code
+                    </p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-database"></i>
+                    <h2>Database Designing</h2>
+                    <p>
+                        MySQL<br>
+                        ✔Structured schemas<br>
+                        ✔Complex query tuning<br>
+                        ✔ACID compliance<br>
+                        
+                        MongoDB<br>
+                        ✔Flexible document models<br>
+                        ✔High-performance aggregations<br>
+                        ✔Horizontal scaling<br>
+                    </p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code-merge"></i>
+                    <h2>API Integrationo</h2>
+                    <p>
+                        ✔ RESTful API development (Node.js/Express)<br>
+                        ✔ Third-party API integration (Payment, Social, Cloud)<br>
+                        ✔ Secure authentication (JWT, OAuth2)<br>
+                        ✔ Webhooks & real-time data flows<br>
+                        ✔ Error handling & rate limiting<br>
+                    </p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents= document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
