@@ -3,78 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mahin</title>
+    <title>Mahin - Backend Developer</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/8cd60501b2.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <div id ="header">
+    <div id="header">
         <div class="container">
            <nav>
-             <img src="images/logo.png"class="logo">
-             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
-             </ul>
+             <img src="images/logo.png" class="logo" alt="Mahin Logo">
+             <div class="nav-links" id="navLinks">
+                <i class="fas fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="portfolio.html" target="_blank">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+             </div>
+             <i class="fas fa-bars" onclick="showMenu()"></i>
            </nav>
-           <div class="header-text">
+           <div class="header-text" data-aos="fade-up">
             <p>Backend Developer</p>
-            <h1>Hi, I'm<span> Mahin</span> <br> From Bangladesh</h1>
+            <h1>Hi, I'm <span>Mahin</span> <br> From Bangladesh</h1>
+            <a href="#contact" class="btn">Get in Touch</a>
            </div> 
         </div>
-
     </div>
 
-<!-- ABOUT SECTION -->
+    <!-- ABOUT SECTION -->
     <div id="about">
         <div class="container">
             <div class="row">
-                <div class="about-col-1">
-                    <img src="images/hello.jpg">
+                <div class="about-col-1" data-aos="fade-right">
+                    <img src="images/hello.jpg" alt="Profile Picture">
                 </div>
-                <div class="about-col-2">
+                <div class="about-col-2" data-aos="fade-left">
                     <h1 class="sub-title">About Me</h1>
                     <p>
-                        I’m a backend developer who thrives on building fast, scalable systems with Node.js, Express, and JavaScript. My
+                        I'm a backend developer who thrives on building fast, scalable systems with Node.js, Express, and JavaScript. My
                         strength lies in crafting high-performance RESTful APIs, designing efficient database architectures (MySQL for
                         relational, MongoDB for NoSQL), and ensuring seamless server-side logic. I obsess over clean code, optimized queries,
-                        and secure authentication (JWT, sessions, OAuth) to deliver robust backends that power smooth user experiences. Whether
-                        it’s debugging bottlenecks, scaling database operations, or architecting microservices, I love turning complex problems
-                        into elegant, maintainable solutions.
+                        and secure authentication (JWT, sessions, OAuth) to deliver robust backends that power smooth user experiences.
                     </p>
 
                     <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')" >Skills</p>
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                         <p class="tab-links" onclick="opentab('experience')">Experience</p>
                         <p class="tab-links" onclick="opentab('education')">Education</p>
                     </div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li><span>Language</span><br>JavaScript</li>
+                            <li><span>Language</span><br>JavaScript, TypeScript</li>
                             <li><span>Backend</span><br>Node.js, Express.js</li>
                             <li><span>Databases</span><br>MySQL, MongoDB</li>
                             <li><span>API Development</span><br>RESTful APIs, Authentication (JWT, OAuth)</li>
                             <li><span>Version Control</span><br>Git, GitHub</li>
-                            <li><span>Other Tools</span><br>Postman</li>
+                            <li><span>Other Tools</span><br>Postman, Docker</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="experience">
                         <ul>
-                            <li><span>Language</span><br>JavaScript</li>
-                            <li><span>Backend</span><br>Node.js, Express.js</li>
-                            <li><span>Databases</span><br>MySQL, MongoDB</li>
-                            <li><span>API Development</span><br>RESTful APIs, Authentication (JWT, OAuth)</li>
-                            <li><span>Version Control</span><br>Git, GitHub</li>
-                            <li><span>Other Tools</span><br>Postman</li>
+                            <li><span>2023 - Present</span><br>Backend Developer at Tech Company</li>
+                            <li><span>2022 - 2023</span><br>Junior Developer at Startup</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>2022-2026</span><br>Bsc in Cse,United International University</li>
-                            
+                            <li><span>2022-2026</span><br>BSc in CSE, United International University</li>
                         </ul>
                     </div>
                 </div>
@@ -83,12 +81,11 @@
     </div>
 
     <!-- Services -->
-
     <div id="services">
         <div class="container">
-            <h1 class="sub-title"> My Services</h1>
+            <h1 class="sub-title" data-aos="fade-up">My Services</h1>
             <div class="services-list">
-                <div>
+                <div data-aos="fade-up" data-aos-delay="100">
                     <i class="fa-solid fa-code"></i>
                     <h2>Backend Development</h2>
                     <p>
@@ -98,54 +95,117 @@
                         ✔ Performance Tuning & Security<br>
                         ✔ Clean, Maintainable Code
                     </p>
-                    <a href="#">Learn More</a>
+                    <a href="#" class="btn">Learn More</a>
                 </div>
-                <div>
+                <div data-aos="fade-up" data-aos-delay="200">
                     <i class="fa-solid fa-database"></i>
                     <h2>Database Designing</h2>
                     <p>
                         MySQL<br>
-                        ✔Structured schemas<br>
-                        ✔Complex query tuning<br>
-                        ✔ACID compliance<br>
+                        ✔ Structured schemas<br>
+                        ✔ Complex query tuning<br>
+                        ✔ ACID compliance<br>
                         
                         MongoDB<br>
-                        ✔Flexible document models<br>
-                        ✔High-performance aggregations<br>
-                        ✔Horizontal scaling<br>
+                        ✔ Flexible document models<br>
+                        ✔ High-performance aggregations<br>
+                        ✔ Horizontal scaling<br>
                     </p>
-                    <a href="#">Learn More</a>
+                    <a href="#" class="btn">Learn More</a>
                 </div>
-                <div>
+                <div data-aos="fade-up" data-aos-delay="300">
                     <i class="fa-solid fa-code-merge"></i>
                     <h2>API Integration</h2>
                     <p>
-                        ✔ RESTful API development (Node.js/Express)<br>
-                        ✔ Third-party API integration (Payment, Social, Cloud)<br>
-                        ✔ Secure authentication (JWT, OAuth2)<br>
-                        ✔ Webhooks & real-time data flows<br>
+                        ✔ RESTful API development<br>
+                        ✔ Third-party API integration<br>
+                        ✔ Secure authentication<br>
+                        ✔ Webhooks & real-time data<br>
                         ✔ Error handling & rate limiting<br>
                     </p>
-                    <a href="#">Learn More</a>
+                    <a href="#" class="btn">Learn More</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <script>
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents= document.getElementsByClassName("tab-contents");
+    <!-- Contact Section -->
+    <div id="contact">
+        <div class="container">
+            <h1 class="sub-title" data-aos="fade-up">Contact Me</h1>
+            <div class="contact-info" data-aos="fade-up">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>md.mahin.bd18@gmail.com</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <p>+8801873306762</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Dhaka, Bangladesh</p>
+                </div>
+            </div>
+            <div class="social-links" data-aos="fade-up">
+                <a href="https://github.com/mahin273" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
 
-        function opentab(tabname){
-            for(tablink of tablinks){
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Tab functionality
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for(tablink of tablinks) {
                 tablink.classList.remove("active-link");
             }
-            for(tabcontent of tabcontents){
+            for(tabcontent of tabcontents) {
                 tabcontent.classList.remove("active-tab")
             }
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
         }
+
+        // Mobile menu
+        var navLinks = document.getElementById("navLinks");
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+
+        // Smooth scrolling - only for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return; // Skip empty hash links
+                
+                // Only handle internal links (those starting with #)
+                if (href.startsWith('#')) {
+                    e.preventDefault();
+                    const targetId = href.substring(1); // Remove the # from the href
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
     </script>
 </body>
 </html>

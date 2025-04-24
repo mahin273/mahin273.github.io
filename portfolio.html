@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahin - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/8cd60501b2.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        /* Portfolio specific styles */
+        .portfolio-header {
+            padding: 100px 0;
+            text-align: center;
+            background: linear-gradient(rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.9));
+        }
+
+        .portfolio-header h1 {
+            font-size: 48px;
+            color: #ccd6f6;
+            margin-bottom: 20px;
+        }
+
+        .portfolio-header p {
+            color: #8892b0;
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 50px 0;
+        }
+
+        .project-card {
+            background: #112240;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            border-color: #64ffda;
+            box-shadow: 0 10px 30px rgba(100, 255, 218, 0.1);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 20px;
+        }
+
+        .project-content h3 {
+            color: #ccd6f6;
+            margin-bottom: 10px;
+        }
+
+        .project-content p {
+            color: #8892b0;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tech-tag {
+            background: rgba(100, 255, 218, 0.1);
+            color: #64ffda;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .project-links a {
+            color: #64ffda;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .project-links a:hover {
+            color: #4cd8b2;
+        }
+
+        .back-home {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: #112240;
+            color: #64ffda;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 1px solid #64ffda;
+        }
+
+        .back-home:hover {
+            background: rgba(100, 255, 218, 0.1);
+            transform: translateY(-2px);
+        }
+
+        @media only screen and (max-width: 768px) {
+            .portfolio-header {
+                padding: 60px 0;
+            }
+
+            .portfolio-header h1 {
+                font-size: 36px;
+            }
+
+            .back-home {
+                position: static;
+                display: inline-block;
+                margin: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-home">
+        <i class="fas fa-arrow-left"></i> Back to Home
+    </a>
+
+    <div class="portfolio-header">
+        <div class="container">
+            <h1 data-aos="fade-up">My Projects</h1>
+            <p data-aos="fade-up" data-aos-delay="100">
+                Here are some of my recent projects showcasing my skills in backend development,
+                database design, and API integration.
+            </p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card" data-aos="fade-up">
+                <img src="images/urbease.jpg" alt="UrbanEase Project" class="project-image">
+                <div class="project-content">
+                    <h3>UrbanEase - Community Problem Reporting Portal</h3>
+                    <p>A web-based platform for residents to report community problems and allow other residents and administrators to view, comment, and manage these reports. Features include problem reporting, status tracking, commenting system, and email notifications.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">React.js</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Express.js</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">Nodemailer</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/mahin273/UrbanEase" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                <img src="images/flightsgo.jpg" alt="FlightsGO Microservice" class="project-image">
+                <div class="project-content">
+                    <h3>FlightsGO - Flight Booking Microservice</h3>
+                    <p>A microservice handling core flight booking functionality including flight searches, booking, payment processing, and inventory management. Part of a larger flight booking system with clean architecture and modular design.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Express.js</span>
+                        <span class="tech-tag">Sequelize</span>
+                        <span class="tech-tag">REST API</span>
+                        <span class="tech-tag">Microservices</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/mahin273/FlightsGO" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                <img src="images/project3.jpg" alt="Project 3" class="project-image">
+                <div class="project-content">
+                    <h3>Authentication Service</h3>
+                    <p>A microservice handling user authentication with support for multiple providers, session management, and security features.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">OAuth</span>
+                        <span class="tech-tag">Redis</span>
+                        <span class="tech-tag">JWT</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="#" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html>
